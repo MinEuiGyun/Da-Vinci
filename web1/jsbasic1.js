@@ -1,3 +1,18 @@
 /** 자바스크립트 Basic 강좌 1 */
-const date = prompt("예약일을 입력하시오", "2023-07-");
-console.log(date);
+function Item(title, price){
+// this = {}
+    this.title = title;
+    this.price = price;
+    this.showPrice = function(){
+        console.log(`가격은 ${price}원 입니다.`);
+    }
+// return this;
+}
+
+const item1 =new Item('인형', 3000);
+const item2 =new Item('가방', 6000);
+const item3 =new Item('지갑', 9000);
+
+console.log(item1, item2, item3);
+
+item3.showPrice();
